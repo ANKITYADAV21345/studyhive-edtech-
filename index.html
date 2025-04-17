@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,3 +84,90 @@
   <script src="index.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StudyHive</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <h1 class="Title">
+    <img src="assets/STUDYHIVE.webp" alt="StudyHive Logo" />
+    StudyHive
+  </h1>
+
+  <!-- Navigation -->
+  <div class="topnav">
+    <div class="nav-links">
+      <a class="nav tab-link" href="index.html">Home</a>
+      <a class="nav tab-link" href="tutorials.html">Tutorials</a>
+      <a class="nav tab-link" href="notes.html">Notes</a>
+      <a class="nav tab-link" href="assignments.html">Assignments</a>
+      <a class="nav tab-link" href="about.html">About</a>
+      <a class="nav tab-link" href="query.html">Query</a>
+    </div>
+
+    <!-- Auth Buttons -->
+    <div class="auth-buttons">
+      <button class="btn auth-btn" id="loginBtn" onclick="showLogin()">Login</button>
+      <button class="btn auth-btn" id="signupBtn" onclick="showSignup()">Signup</button>
+      <button class="btn auth-btn hidden" id="logoutBtn" onclick="logout()">Sign Out</button>
+    </div>
+    
+    <!-- Search Form -->
+    <form class="form">
+      <label for="Search">
+        <input class="input" id="Search" type="text" required placeholder="Type something..." />
+        <div class="fancy-bg"></div>
+        <div class="search"></div>
+        <div>
+          <button class="btn" type="button" id="EARCH" onclick="search()">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="svgIcon">
+              <path d="M21.53 20.47l-3.66-3.66C..."></path>
+            </svg>
+          </button>
+        </div>
+      </label>
+    </form>
+  </div>
+
+  <!-- Authentication Modal -->
+  <div id="authModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form hidden">
+        <h2>Login</h2>
+        <input type="email" placeholder="Email" required id="loginEmail" />
+        <input type="password" placeholder="Password" required id="loginPassword" />
+        <button type="button" onclick="login()">Login</button>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="auth-form hidden" action="https://formsubmit.co/ankityadav21345@gmail.com" method="POST" onsubmit="saveCredentials(event)">
+        <h2>Signup</h2>
+        <input type="text" name="name" id="signupName" placeholder="Your Name" required />
+        <input type="email" name="email" id="signupEmail" placeholder="Your Email" required />
+        <input type="password" name="password" id="signupPassword" placeholder="Password" required />
+        <input type="hidden" name="_subject" value="New Signup on StudyHive - {{name}}" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_autoresponse" value="Welcome to StudyHive {{name}}! Thank you for signing up. You can now access all our learning resources." />
+        <input type="hidden" name="_cc" value="ankityadav21345@gmail.com" />
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="RecentlyUpdated">
+    <!-- ... Existing cards ... -->
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
+>>>>>>> df0ffa1 (add new project)
